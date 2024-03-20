@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor é Dinheiro?</title>
+    <style>
+       /* Estilos para o corpo do documento */
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffecf2; /* Cor de fundo padrão */
+            color: #000000; /* Cor do texto padrão */
+            display: flex;
+            flex-direction: column; /* Define o layout como coluna */
+            align-items: center; /* Centraliza na horizontal */
+            justify-content: center; /* Centraliza na vertical */
+            min-height: 100vh; /* Define a altura mínima da tela inteira */
+            transition: background-color 0.3s, color 0.3s; /* Adiciona transição suave para mudanças de cor */
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            text-align: center; /* Centraliza o conteúdo */
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px; /* Tamanho da fonte maior */
+            text-transform: uppercase; /* Transforma o texto em maiúsculo */
+        }
+
+        /* Estilo para o botão */
+        button {
+            background-color: #ff69b4; /* Cor do botão */
+            color: #fff; /* Cor do texto do botão */
+            border: none; /* Remove a borda do botão */
+            padding: 10px 10px; /* Espaçamento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            border-radius: 5px; /* Borda arredondada */
+            cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+        
+        }
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #ff69b4; /* Rosa */
+    color: #fff;
+    text-align: center;
+    padding: 9px;
+    bottom: 0; 
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+}
+
+
+    </style>
+     <section>
+
+        <img src="imagens/porcaria.jpg" alt="maria">
+      
+      
+        
+             </section>
+     
+</head>
+<body>
+    <header>
+        <h1>O lado consumista do Dia dos Namorados</h1>
+        <button onclick="invertColors()">Inverter Cores</button> <!-- Botão para inverter as cores -->
+        <button onclick="changeFontSize('+')">Aumentar Zoom</button> <!-- Botão para aumentar o zoom -->
+        <button onclick="changeFontSize('-')">Diminuir Zoom</button> <!-- Botão para diminuir o zoom -->
+    
+    </header>
+    <section>
+        <!-- Seu conteúdo aqui -->
+        <h2>Declare seu amor sem exageros</h2>
+        <p>O Dia dos Namorados é uma data especial que vai além de presentes caros e jantares extravagantes. Trata-se de uma oportunidade única para compartilhar momentos especiais e construir memórias duradouras ao lado da pessoa amada.
+
+            Em vez de sucumbir à pressão do consumismo, é importante celebrar esse dia de forma significativa, demonstrando o amor com gestos simples, porém sinceros. Evite que as propagandas e as expectativas sociais desvirtuem o verdadeiro significado do amor. Valorize a conexão emocional e o apoio mútuo que você compartilha com seu parceiro.</br>
+            Neste Dia dos Namorados, busque celebrar o amor de maneira autêntica e genuína. Seja criativo e pense além do convencional ao expressar seus sentimentos. Lembre-se de que as demonstrações de afeto vão muito além do material.</br>
+            Aproveite essa ocasião para fortalecer o vínculo com seu parceiro, renovando o compromisso e valorizando os pequenos momentos de felicidade compartilhados. Em um mundo cada vez mais focado no materialismo, cultivar relacionamentos baseados em valores como respeito, confiança e carinho torna-se ainda mais relevante.</br>
+            Portanto, neste Dia dos Namorados, faça uma pausa para refletir sobre o que realmente importa em seu relacionamento e concentre-se em fortalecer os laços que os unem. Celebre o amor de forma consciente e gratificante.</br>
+            Além disso, lembre-se de que o Dia dos Namorados é uma ótima oportunidade para expressar gratidão e apreciação pelo seu parceiro. Dedique um tempo para demonstrar o quanto ele ou ela é importante em sua vida e como você valoriza a presença dele ou dela ao seu lado.
+            </p>
+        <p>Aproveite este Dia dos Namorados para se reconectar com seu parceiro e renovar seu compromisso um com o outro. Dê valor aos pequenos momentos de felicidade compartilhados e à intimidade que vocês compartilham. Em um mundo cada vez mais focado no materialismo, é importante cultivar relacionamentos baseados em valores como respeito, confiança e carinho. Portanto, neste Dia dos Namorados, faça uma pausa para refletir sobre o que realmente importa em seu relacionamento e concentre-se em fortalecer os laços que os unem.</p>        <!-- Adicione mais conteúdo aqui -->
+    </section>
+    <section> 
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+</section>
+    <footer>
+        <p>&copy; Site feito por Maria Thizar.</p>
+    </footer>
+
+    <script>
+        function invertColors() {
+            var body = document.body;
+            var currentBackgroundColor = window.getComputedStyle(body).backgroundColor;
+
+            if (currentBackgroundColor === 'rgb(255, 236, 242)') { // Se a cor de fundo for a padrão
+                body.style.backgroundColor = '#000000'; // Muda para fundo escuro
+                body.style.color = '#ffffff'; // Muda para texto claro
+            } else {
+                body.style.backgroundColor = '#ffecf2'; // Volta para cor de fundo padrão
+                body.style.color = '#000000'; // Volta para cor de texto padrão
+            }
+        }
+
+function changeFontSize(operation) {
+    var body = document.body;
+    var currentFontSize = parseFloat(window.getComputedStyle(body).fontSize);
+
+    if (operation === '+') {
+        body.style.fontSize = (currentFontSize * 1.1) + 'px'; // Aumenta o tamanho da fonte em 10%
+    } else if (operation === '-') {
+        body.style.fontSize = (currentFontSize / 1.1) + 'px'; // Diminui o tamanho da fonte em 10%
+    }
+}
+
+
+    </script>
+</body>
+</html>
